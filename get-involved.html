@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Get Involved — Prosperity Pathways AP Foundation</title>
+  <link rel="icon" href="assets/icon-torch.svg">
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="nav-logo" href="index.html"><img src="assets/logo-horizontal.svg" alt="Prosperity Pathways AP Foundation"></a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="our-story.html">Our Story</a>
+        <a href="get-involved.html" class="active">Get Involved</a>
+        <a href="donate.html" class="cta">Donate</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="eyebrow">Get Involved</div>
+      <h1>Four ways to open the door</h1>
+      <div class="rule"></div>
+      <p>Whether you teach, study, give, or volunteer, there is a place for you here.</p>
+    </div>
+  </section>
+
+  <div class="crumbs">
+    <div class="container crumbs-inner"><a href="index.html">Home</a><span class="sep">›</span><span>Get Involved</span></div>
+  </div>
+
+  <div class="container layout">
+    <main>
+      <div id="students" class="involve">
+        <div class="sec-head"><span class="eyebrow">For Students</span><h2>If the fee is your only barrier, ask.</h2></div>
+        <p class="prose">If you qualify for free or reduced-price lunch, a fee waiver, or simply can't cover AP exam costs, talk to your counselor and have them refer you to us. There is no lengthy application and no essay — we confirm eligibility through your school and fund your registration directly.</p>
+        <a href="#students" class="btn btn-secondary">Talk to your counselor</a>
+        <hr class="hr">
+      </div>
+
+      <div id="schools" class="involve">
+        <div class="sec-head"><span class="eyebrow">For Schools</span><h2>Partner with us in one conversation.</h2></div>
+        <p class="prose">Counselors and AP coordinators can refer eligible students through a short, secure process. We handle funding at the source and confirm registration before deadlines, so no prepared student in your building misses an exam over cost.</p>
+        <a href="mailto:hello@prosperitypathways.org" class="btn btn-secondary">Become a partner school</a>
+        <hr class="hr">
+      </div>
+
+      <div id="volunteers" class="involve">
+        <div class="sec-head"><span class="eyebrow">For Volunteers</span><h2>Build the prep library.</h2></div>
+        <p class="prose">Recent AP students and educators help assemble and review our free preparation materials — practice sets, review guides, and study plans. It is flexible, remote, and meaningful: the resources you make reach students sitting the same exams you did.</p>
+        <a href="mailto:hello@prosperitypathways.org" class="btn btn-secondary">Volunteer with us</a>
+        <hr class="hr">
+      </div>
+
+      <div id="donors" class="involve">
+        <div class="sec-head"><span class="eyebrow">For Donors</span><h2>Fund exams, not overhead.</h2></div>
+        <p class="prose">Gifts go directly to exam fees and prep materials. Because we are student-run, nearly every dollar reaches a student. A single gift of $97 covers one full AP exam for a student who has already done the work.</p>
+        <a href="donate.html" class="btn btn-donate">See your impact</a>
+      </div>
+    </main>
+
+    <aside>
+      <nav aria-label="In This Section">
+        <p class="side-h">In This Section</p>
+        <ul class="side-list">
+          <li><a href="#students" class="active">Students</a></li>
+          <li><a href="#schools">Schools</a></li>
+          <li><a href="#volunteers">Volunteers</a></li>
+          <li><a href="#donors">Donors</a></li>
+        </ul>
+      </nav>
+      <div class="side-help">
+        <h3>Have a question?</h3>
+        <p>We respond to every message from students, schools, and supporters.</p>
+        <a href="donate.html" class="btn btn-secondary btn-sm">Contact us</a>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="row">
+            <img src="assets/icon-torch-white.svg" alt="">
+            <div class="nm">Prosperity Pathways<span>AP Foundation</span></div>
+          </div>
+          <p>Funding AP exam fees and free preparation for students with financial need.</p>
+        </div>
+        <div class="footer-cols">
+          <div>
+            <h4>Explore</h4>
+            <ul>
+              <li><a href="our-story.html">Our Story</a></li>
+              <li><a href="get-involved.html">Get Involved</a></li>
+              <li><a href="donate.html">Donate</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Contact</h4>
+            <ul>
+              <li><a href="mailto:hello@prosperitypathways.org">hello@prosperitypathways.org</a></li>
+              <li><a href="get-involved.html">Partner with a school</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bot">
+        <span class="ein">EIN 92-3847561 · A registered 501(c)(3) nonprofit</span>
+        <span class="tag">Lighting the way forward</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      var links = document.querySelectorAll('.side-list a');
+      links.forEach(function(a){
+        a.addEventListener('click', function(){
+          links.forEach(function(x){ x.classList.remove('active'); });
+          a.classList.add('active');
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Donate — Prosperity Pathways AP Foundation</title>
+  <link rel="icon" href="assets/icon-torch.svg">
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="nav-logo" href="index.html"><img src="assets/logo-horizontal.svg" alt="Prosperity Pathways AP Foundation"></a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="our-story.html">Our Story</a>
+        <a href="get-involved.html">Get Involved</a>
+        <a href="donate.html" class="cta">Donate</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="eyebrow">Support</div>
+      <h1>Donate</h1>
+      <div class="rule"></div>
+      <p>Fund an exam. Open a door.</p>
+    </div>
+  </section>
+
+  <div class="crumbs">
+    <div class="container crumbs-inner"><a href="index.html">Home</a><span class="sep">›</span><span>Donate</span></div>
+  </div>
+
+  <div class="container layout">
+    <main>
+      <div id="tiers" class="sec-head">
+        <span class="eyebrow">Donate</span>
+        <h2>Where your gift goes</h2>
+      </div>
+      <p class="prose" style="margin-bottom:32px">Every gift is applied directly to exam fees and preparation materials. Because we are student-run, nearly every dollar reaches a student. Choose an amount below, or give any sum that suits you.</p>
+
+      <div class="tiers">
+        <div class="tier" data-amt="$25"><div class="amt">$25</div><div class="lab">Prep materials</div><p>A semester of curated prep resources for one student.</p></div>
+        <div class="tier" data-amt="$50"><div class="amt">$50</div><div class="lab">Half an exam</div><p>Covers half of a single AP exam registration fee.</p></div>
+        <div class="tier featured" data-amt="$97"><div class="amt">$97</div><div class="lab">One full exam</div><p>Funds one complete AP exam fee for a prepared student.</p></div>
+        <div class="tier" data-amt="$194"><div class="amt">$194</div><div class="lab">Two exams</div><p>Sends one student into exam week fully covered for two.</p></div>
+        <div class="tier" data-amt="$500+"><div class="amt">$500+</div><div class="lab">A full cohort</div><p>Carries a small class of students through exam day.</p></div>
+      </div>
+
+      <div class="donate-action">
+        <a href="#" class="btn btn-donate btn-lg" id="give-btn">Give $97 today</a>
+        <span class="note">Selected: <strong id="sel">$97</strong> · tap a tier to change</span>
+      </div>
+
+      <hr class="hr">
+
+      <div id="contact" class="sec-head">
+        <span class="eyebrow">Contact &amp; Giving</span>
+        <h2>Other ways to give</h2>
+      </div>
+      <div class="prose">
+        <p>For checks, employer matching, or to discuss a larger gift or grant, reach the foundation directly:</p>
+        <dl class="dl">
+          <dt>Email</dt>
+          <dd><a href="mailto:give@prosperitypathways.org"><strong>give@prosperitypathways.org</strong></a></dd>
+          <dt>Mail</dt>
+          <dd>Prosperity Pathways AP Foundation<br>PO Box 1487, Madison, WI 53701</dd>
+          <dt>Tax status</dt>
+          <dd>Registered 501(c)(3) · EIN 92-3847561 · gifts are tax-deductible</dd>
+        </dl>
+      </div>
+    </main>
+
+    <aside>
+      <nav aria-label="In This Section">
+        <p class="side-h">In This Section</p>
+        <ul class="side-list">
+          <li><a href="#tiers" class="active">Where your gift goes</a></li>
+          <li><a href="#contact">Other ways to give</a></li>
+        </ul>
+      </nav>
+      <div class="side-help">
+        <h3>Have a question?</h3>
+        <p>We respond to every message from students, schools, and supporters.</p>
+        <a href="mailto:give@prosperitypathways.org" class="btn btn-secondary btn-sm">Email us</a>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="row">
+            <img src="assets/icon-torch-white.svg" alt="">
+            <div class="nm">Prosperity Pathways<span>AP Foundation</span></div>
+          </div>
+          <p>Funding AP exam fees and free preparation for students with financial need.</p>
+        </div>
+        <div class="footer-cols">
+          <div>
+            <h4>Explore</h4>
+            <ul>
+              <li><a href="our-story.html">Our Story</a></li>
+              <li><a href="get-involved.html">Get Involved</a></li>
+              <li><a href="donate.html">Donate</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Contact</h4>
+            <ul>
+              <li><a href="mailto:hello@prosperitypathways.org">hello@prosperitypathways.org</a></li>
+              <li><a href="get-involved.html">Partner with a school</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bot">
+        <span class="ein">EIN 92-3847561 · A registered 501(c)(3) nonprofit</span>
+        <span class="tag">Lighting the way forward</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      var tiers = document.querySelectorAll('.tier');
+      var sel = document.getElementById('sel');
+      var btn = document.getElementById('give-btn');
+      tiers.forEach(function(t){
+        t.addEventListener('click', function(){
+          tiers.forEach(function(x){ x.classList.remove('featured'); });
+          t.classList.add('featured');
+          var amt = t.dataset.amt;
+          sel.textContent = amt;
+          btn.textContent = 'Give ' + amt + ' today';
+        });
+      });
+      var links = document.querySelectorAll('.side-list a');
+      links.forEach(function(a){
+        a.addEventListener('click', function(){
+          links.forEach(function(x){ x.classList.remove('active'); });
+          a.classList.add('active');
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
