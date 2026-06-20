@@ -148,11 +148,16 @@ aside{position:sticky;top:calc(var(--nav-h) + 24px)}
 /* ---- Bio cards ---- */
 .bios{display:flex;flex-direction:column;gap:40px;margin-top:8px}
 .bio{display:flex;gap:24px;align-items:flex-start}
-.bio .mono{width:96px;height:96px;flex:none;border-radius:2px;background:var(--navy-800);color:var(--white);
-  display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-weight:300;font-size:32px}
+.bio .mono,.bio .avatar{width:96px;height:96px;flex:none;border-radius:2px;background:var(--navy-800);color:var(--white);
+  display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-weight:300;font-size:32px;overflow:hidden}
+.bio .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+.bio .avatar .avatar-fallback{width:100%;height:100%;display:none;align-items:center;justify-content:center}
 .bio h3{font-family:var(--font-serif);font-weight:700;font-size:19px;color:var(--navy-800);margin:0}
 .bio .role{font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-700);margin:6px 0 12px}
+.bio .role .tag{display:inline-block;margin-left:8px;padding:2px 8px;border-radius:999px;background:var(--ink-100,#f0efe9);color:var(--ink-500);font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;vertical-align:middle}
 .bio p{font-size:16px;line-height:1.7;color:var(--ink-700);margin:0;max-width:560px}
+.bios + .sec-head,.bios + .bio-group-head{margin-top:48px}
+.bio-group-head{font-family:var(--font-serif);font-weight:700;font-size:16px;color:var(--navy-800);margin:0 0 16px}
 
 /* ---- Get Involved sections ---- */
 .involve{margin-bottom:48px}
