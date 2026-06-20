@@ -42,16 +42,18 @@
       <p class="prose" style="margin-bottom:32px">Every gift is applied directly to exam fees and preparation materials. Because we are student-run, nearly every dollar reaches a student. Choose an amount below, or give any sum that suits you.</p>
 
       <div class="tiers">
-        <div class="tier" data-amt="$25"><div class="amt">$25</div><div class="lab">Prep materials</div><p>A semester of curated prep resources for one student.</p></div>
+        <div class="tier" data-amt="$25"><div class="amt">$25</div><div class="lab">Help out</div><p>A small gift that goes straight toward funding exam fees.</p></div>
         <div class="tier" data-amt="$50"><div class="amt">$50</div><div class="lab">Half an exam</div><p>Covers half of a single AP exam registration fee.</p></div>
-        <div class="tier featured" data-amt="$97"><div class="amt">$97</div><div class="lab">One full exam</div><p>Funds one complete AP exam fee for a prepared student.</p></div>
-        <div class="tier" data-amt="$194"><div class="amt">$194</div><div class="lab">Two exams</div><p>Sends one student into exam week fully covered for two.</p></div>
+        <div class="tier featured" data-amt="$99"><div class="amt">$99</div><div class="lab">One full exam</div><p>Funds one complete AP exam fee for a prepared student.</p></div>
+        <div class="tier" data-amt="$198"><div class="amt">$198</div><div class="lab">Two exams</div><p>Sends one student into exam week fully covered for two.</p></div>
         <div class="tier" data-amt="$500+"><div class="amt">$500+</div><div class="lab">A full cohort</div><p>Carries a small class of students through exam day.</p></div>
+        <div class="tier" data-amt="other"><div class="amt">Other</div><div class="lab">Choose your amount</div><p>Give whatever amount works for you.</p></div>
       </div>
 
       <div class="donate-action">
-        <a href="#" class="btn btn-donate btn-lg" id="give-btn">Give $97 today</a>
-        <span class="note">Selected: <strong id="sel">$97</strong> · tap a tier to change</span>
+        <input type="number" id="other-input" class="other-input" min="1" step="1" placeholder="Enter amount" hidden>
+        <a href="#" class="btn btn-donate btn-lg" id="give-btn">Give $99 today</a>
+        <span class="note">Selected: <strong id="sel">$99</strong> · tap a tier to change</span>
       </div>
 
       <hr class="hr">
@@ -64,11 +66,11 @@
         <p>For checks, employer matching, or to discuss a larger gift or grant, reach the foundation directly:</p>
         <dl class="dl">
           <dt>Email</dt>
-          <dd><a href="mailto:give@prosperitypathways.org"><strong>give@prosperitypathways.org</strong></a></dd>
+          <dd><a href="mailto:info@prosperitypathwaysap.org"><strong>info@prosperitypathwaysap.org</strong></a></dd>
           <dt>Mail</dt>
-          <dd>Prosperity Pathways AP Foundation<br>7687 Circulo Sequoia, Carlsbad CA 92009</dd>
+          <dd>Prosperity Pathways AP Foundation<br>7687 Circulo Sequoia, Carlsbad CA, 92009</dd>
           <dt>Tax status</dt>
-          <dd>Registered 501(c)(3) · EIN 92-3847561 · gifts are tax-deductible</dd>
+          <dd>Registered 501(c)(3) · EIN 61-2278521 · Gifts are tax-deductible</dd>
         </dl>
       </div>
     </main>
@@ -84,7 +86,7 @@
       <div class="side-help">
         <h3>Have a question?</h3>
         <p>We respond to every message from students, schools, and supporters.</p>
-        <a href="mailto:give@prosperitypathways.org" class="btn btn-secondary btn-sm">Email us</a>
+        <a href="mailto:info@prosperitypathwaysap.org" class="btn btn-secondary btn-sm">Email us</a>
       </div>
     </aside>
   </div>
@@ -111,7 +113,7 @@
           <div>
             <h4>Contact</h4>
             <ul>
-              <li><a href="mailto:hello@prosperitypathways.org">hello@prosperitypathways.org</a></li>
+              <li><a href="mailto:info@prosperitypathwaysap.org">info@prosperitypathwaysap.org</a></li>
               <li><a href="get-involved.html">Partner with a school</a></li>
             </ul>
           </div>
@@ -129,14 +131,33 @@
       var tiers = document.querySelectorAll('.tier');
       var sel = document.getElementById('sel');
       var btn = document.getElementById('give-btn');
+      var otherInput = document.getElementById('other-input');
+
+      function setAmount(amt){
+        sel.textContent = amt;
+        btn.textContent = 'Give ' + amt + ' today';
+      }
+
       tiers.forEach(function(t){
         t.addEventListener('click', function(){
           tiers.forEach(function(x){ x.classList.remove('featured'); });
           t.classList.add('featured');
           var amt = t.dataset.amt;
-          sel.textContent = amt;
-          btn.textContent = 'Give ' + amt + ' today';
+          if (amt === 'other') {
+            otherInput.hidden = false;
+            otherInput.focus();
+            var val = otherInput.value;
+            setAmount(val ? '$' + val : '$0');
+          } else {
+            otherInput.hidden = true;
+            setAmount(amt);
+          }
         });
+      });
+
+      otherInput.addEventListener('input', function(){
+        var val = otherInput.value;
+        setAmount(val ? '$' + val : '$0');
       });
       var links = document.querySelectorAll('.side-list a');
       links.forEach(function(a){

@@ -139,6 +139,9 @@ aside{position:sticky;top:calc(var(--nav-h) + 24px)}
 .donate-action{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-bottom:8px}
 .donate-action .note{font-size:14px;color:var(--ink-500)}
 .donate-action .note strong{color:var(--navy-800)}
+.other-input{font-family:var(--font-sans,inherit);font-size:16px;padding:13px 16px;border:1px solid var(--line-300);
+  border-radius:4px;width:160px;color:var(--navy-800)}
+.other-input:focus{outline:none;border-color:var(--navy-800)}
 
 /* ---- Definition list (contact) ---- */
 .dl{margin:0;display:grid;grid-template-columns:140px 1fr;row-gap:12px;font-size:16px}
@@ -146,16 +149,23 @@ aside{position:sticky;top:calc(var(--nav-h) + 24px)}
 .dl dd{margin:0}
 
 /* ---- Bio cards ---- */
-.bios{display:flex;flex-direction:column;gap:40px;margin-top:8px}
-.bio{display:flex;gap:24px;align-items:flex-start}
-.bio .mono,.bio .avatar{width:96px;height:96px;flex:none;border-radius:2px;background:var(--navy-800);color:var(--white);
-  display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-weight:300;font-size:32px;overflow:hidden}
+.bios{display:flex;flex-direction:column;gap:12px;margin-top:8px}
+.bio{border:1px solid var(--ink-100,#e8e6df);border-radius:6px;padding:0 20px}
+.bio summary{display:flex;gap:20px;align-items:center;padding:16px 0;cursor:pointer;list-style:none}
+.bio summary::-webkit-details-marker{display:none}
+.bio summary::marker{content:''}
+.bio .mono,.bio .avatar{width:56px;height:56px;flex:none;border-radius:2px;background:var(--navy-800);color:var(--white);
+  display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-weight:300;font-size:20px;overflow:hidden}
 .bio .avatar img{width:100%;height:100%;object-fit:cover;display:block}
 .bio .avatar .avatar-fallback{width:100%;height:100%;display:none;align-items:center;justify-content:center}
-.bio h3{font-family:var(--font-serif);font-weight:700;font-size:19px;color:var(--navy-800);margin:0}
-.bio .role{font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-700);margin:6px 0 12px}
+.bio .bio-head{flex:1}
+.bio h3{font-family:var(--font-serif);font-weight:700;font-size:17px;color:var(--navy-800);margin:0}
+.bio .role{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-700);margin:4px 0 0}
 .bio .role .tag{display:inline-block;margin-left:8px;padding:2px 8px;border-radius:999px;background:var(--ink-100,#f0efe9);color:var(--ink-500);font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;vertical-align:middle}
-.bio p{font-size:16px;line-height:1.7;color:var(--ink-700);margin:0;max-width:560px}
+.bio .chevron{flex:none;font-size:22px;color:var(--ink-400);transition:transform .2s ease}
+.bio[open] .chevron{transform:rotate(90deg)}
+.bio p{font-size:15px;line-height:1.7;color:var(--ink-700);margin:0 0 14px;max-width:560px}
+.bio p:last-of-type{margin-bottom:20px}
 .bios + .sec-head,.bios + .bio-group-head{margin-top:48px}
 .bio-group-head{font-family:var(--font-serif);font-weight:700;font-size:16px;color:var(--navy-800);margin:0 0 16px}
 
