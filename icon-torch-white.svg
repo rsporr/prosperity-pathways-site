@@ -1,8 +1,0 @@
-<svg width="50" height="88" viewBox="0 0 50 88" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Prosperity Pathways torch mark on dark">
-  <ellipse cx="25" cy="80" rx="13" ry="4" fill="#FFFFFF" opacity="0.08"></ellipse>
-  <rect x="20" y="69" width="10" height="14" rx="2" fill="#FFFFFF" opacity="0.9"></rect>
-  <rect x="11" y="73" width="28" height="6" rx="2" fill="#FFFFFF" opacity="0.7"></rect>
-  <path d="M25,69 C25,69 10,54 13,33 C16,17 25,10 25,10 C25,10 27,18 25,31 C30,21 32,8 29,0 C39,13 36,33 27,41 C33,32 34,18 31,10 C39,22 31,48 25,69Z" fill="#B8860B"></path>
-  <path d="M25,65 C25,65 17,51 19,38 C21,28 25,24 25,24 C25,24 27,32 25,42 C28,32 29,21 27,14 C33,26 28,48 25,65Z" fill="#E8C860" opacity="0.6"></path>
-  <path d="M25,59 C25,59 21,48 22,39 C23,34 25,30 25,30 C26,36 25,48 25,59Z" fill="#FDE090" opacity="0.45"></path>
-</svg>
