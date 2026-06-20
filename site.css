@@ -42,8 +42,8 @@ img{display:block}
 .nav-links a.cta:hover{background:var(--gold-700)}
 
 /* ---- Hero ---- */
-.hero{background:var(--navy-800);color:var(--white);min-height:280px;display:flex;align-items:center}
-.hero-inner{padding:56px 0}
+.hero{background:var(--navy-800);color:var(--white);min-height:280px;display:flex;align-items:center;text-align:left}
+.hero-inner{padding:56px 0;width:100%}
 .hero .eyebrow{color:var(--gold-400);margin-bottom:18px}
 .hero h1{font-family:var(--font-serif);font-weight:300;font-size:52px;line-height:1.15;
   letter-spacing:-.01em;margin:0;max-width:880px}
@@ -123,6 +123,7 @@ aside{position:sticky;top:calc(var(--nav-h) + 24px)}
 .contact h3{font-family:var(--font-serif);font-weight:300;font-size:30px;margin:0 0 14px;max-width:520px}
 .contact p{font-size:18px;line-height:1.6;color:rgba(255,255,255,.82);margin:0 0 24px;max-width:520px}
 .contact a{color:var(--gold-400)}
+.contact a.btn{color:var(--white)}
 
 /* ---- Impact cards ---- */
 .tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px;margin-bottom:28px}
