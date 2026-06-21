@@ -212,6 +212,9 @@ aside{position:sticky;top:calc(var(--nav-h) + 24px)}
 .footer-bot .ein{font-size:14px;color:rgba(255,255,255,.6)}
 .footer-bot .tag{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-400)}
 
+/* ---- Form embed (share your story) ---- */
+.form-embed{width:100%;border:1px solid var(--line-300);border-radius:4px;margin:24px 0}
+
 /* ---- Responsive ---- */
 @media (max-width:880px){
   .layout{grid-template-columns:1fr;gap:48px}
