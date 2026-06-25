@@ -226,4 +226,5 @@ aside{position:sticky;top:calc(var(--nav-h) + 24px)}
 @media (max-width:560px){
   .nav-links a:not(.cta){display:none}
   .hero h1{font-size:32px}
+  body{overflow-x:hidden}
 }
