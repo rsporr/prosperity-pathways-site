@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Testimonials — Prosperity Pathways AP Foundation</title>
+  <title>Testimonials â Prosperity Pathways AP Foundation</title>
   <link rel="icon" href="assets/app-icon.svg">
   <link rel="stylesheet" href="site.css">
   <script
@@ -15,6 +15,9 @@
   <header class="nav">
     <div class="container nav-inner">
       <a class="nav-logo" href="index.html"><img src="assets/logo-horizontal.svg" alt="Prosperity Pathways AP Foundation"></a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
       <nav class="nav-links">
         <a href="index.html">Home</a>
         <a href="our-story.html">Our Story</a>
@@ -56,7 +59,7 @@
   </section>
 
   <div class="crumbs">
-    <div class="container crumbs-inner"><a href="index.html">Home</a><span class="sep">›</span><span>Testimonials</span></div>
+    <div class="container crumbs-inner"><a href="index.html">Home</a><span class="sep">âº</span><span>Testimonials</span></div>
   </div>
 
   <div class="container layout">
@@ -67,7 +70,7 @@
           <!-- PLACEHOLDER: replace with real testimonial -->
           <div class="testimonial">
             <p class="quote-mark">&ldquo;</p>
-            <p class="quote-text">I was going to skip my Calculus exam because I couldn't cover the fee in time. Prosperity Pathways funded it before the registration deadline, and I ended up scoring a 4 — enough for college credit I didn't think I'd get.</p>
+            <p class="quote-text">I was going to skip my Calculus exam because I couldn't cover the fee in time. Prosperity Pathways funded it before the registration deadline, and I ended up scoring a 4 â enough for college credit I didn't think I'd get.</p>
             <div class="t-foot">
               <div class="avatar">
                 <img src="assets/team/placeholder-student-1.jpg" alt="Placeholder Student" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
@@ -83,7 +86,7 @@
           <!-- PLACEHOLDER: replace with real testimonial -->
           <div class="testimonial">
             <p class="quote-mark">&ldquo;</p>
-            <p class="quote-text">My counselor mentioned the foundation two weeks before the deadline. There was no essay, no long application — just a quick referral, and three of my exam fees were covered. I passed all three.</p>
+            <p class="quote-text">My counselor mentioned the foundation two weeks before the deadline. There was no essay, no long application â just a quick referral, and three of my exam fees were covered. I passed all three.</p>
             <div class="t-foot">
               <div class="avatar">
                 <img src="assets/team/placeholder-student-2.jpg" alt="Placeholder Student" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
@@ -137,7 +140,7 @@
           <!-- PLACEHOLDER: replace with real testimonial -->
           <div class="testimonial">
             <p class="quote-mark">&ldquo;</p>
-            <p class="quote-text">We partnered with the foundation last year and it changed how many of our students even attempt AP exams. Knowing the fee isn't a barrier, counselors can focus on whether a student is ready — not whether they can pay.</p>
+            <p class="quote-text">We partnered with the foundation last year and it changed how many of our students even attempt AP exams. Knowing the fee isn't a barrier, counselors can focus on whether a student is ready â not whether they can pay.</p>
             <div class="t-foot">
               <div class="avatar">
                 <img src="assets/team/placeholder-school-2.jpg" alt="Placeholder Counselor" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
@@ -155,18 +158,20 @@
       <div class="contact">
         <div class="eyebrow">Submit Your Story</div>
         <h3>Are you a student or school we've helped?</h3>
-        <p>We'd love to share your experience. Send us a few sentences about your experience — and a photo if you'd like to include one — and we may feature it on this page.</p>
+        <p>We'd love to share your experience. Send us a few sentences about your experience â and a photo if you'd like to include one â and we may feature it on this page.</p>
         <a href="share-your-story.html" class="btn btn-donate">Share your story</a>
       </div>
     </main>
 
     <aside>
       <nav aria-label="In This Section">
-        <p class="side-h">In This Section</p>
-        <ul class="side-list">
+        <button class="side-h side-h-toggle" aria-expanded="false">In This Section <span class="side-h-arrow">▾</span></button>
+        <div class="side-list-wrap">
+          <ul class="side-list">
           <li><a href="#students" class="active">Students</a></li>
           <li><a href="#schools">Schools</a></li>
         </ul>
+        </div>
       </nav>
       <div class="side-help">
         <h3>Have a question?</h3>
@@ -206,7 +211,7 @@
         </div>
       </div>
       <div class="footer-bot">
-        <span class="ein">EIN 61-2278521 · A registered 501(c)(3) nonprofit</span>
+        <span class="ein">EIN 61-2278521 Â· A registered 501(c)(3) nonprofit</span>
         <span class="tag">Lighting the way forward</span>
       </div>
     </div>
@@ -221,6 +226,31 @@
           a.classList.add('active');
         });
       });
+    })();
+  </script>
+  <script>
+    (function(){
+      var toggle = document.querySelector(".nav-toggle");
+      var links = document.querySelector(".nav-links");
+      if (toggle && links) {
+        toggle.addEventListener("click", function(){
+          var isOpen = links.classList.toggle("open");
+          toggle.classList.toggle("open", isOpen);
+          toggle.setAttribute("aria-expanded", isOpen);
+        });
+      }
+    })();
+  </script>
+  <script>
+    (function(){
+      var sideToggle = document.querySelector(".side-h-toggle");
+      var sideWrap = document.querySelector(".side-list-wrap");
+      if (sideToggle && sideWrap) {
+        sideToggle.addEventListener("click", function(){
+          var isOpen = sideWrap.classList.toggle("open");
+          sideToggle.setAttribute("aria-expanded", isOpen);
+        });
+      }
     })();
   </script>
 </body>

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
-  <title>Donate — Prosperity Pathways AP Foundation</title>
+  <title>Donate â Prosperity Pathways AP Foundation</title>
   <link rel="icon" href="assets/app-icon.svg">
   <link rel="stylesheet" href="site.css">
   <script
@@ -16,6 +16,9 @@
   <header class="nav">
     <div class="container nav-inner">
       <a class="nav-logo" href="index.html"><img src="assets/logo-horizontal.svg" alt="Prosperity Pathways AP Foundation"></a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
       <nav class="nav-links">
         <a href="index.html">Home</a>
         <a href="our-story.html">Our Story</a>
@@ -57,7 +60,7 @@
   </section>
 
   <div class="crumbs">
-    <div class="container crumbs-inner"><a href="index.html">Home</a><span class="sep">›</span><span>Donate</span></div>
+    <div class="container crumbs-inner"><a href="index.html">Home</a><span class="sep">âº</span><span>Donate</span></div>
   </div>
 
   <div class="container layout">
@@ -70,11 +73,11 @@
 
       <p class="impact-label">Here's what your gift funds:</p>
       <ul class="impact-list">
-        <li><strong>$25</strong> — helps cover part of an exam fee</li>
-        <li><strong>$50</strong> — half of one AP exam registration fee</li>
-        <li class="recommended"><strong>$99</strong> — one full AP exam fee for a prepared student <span class="rec-tag">Recommended</span></li>
-        <li><strong>$198</strong> — two students' exam fees, fully covered</li>
-        <li><strong>$500+</strong> — a full cohort through exam day</li>
+        <li><strong>$25</strong> â helps cover part of an exam fee</li>
+        <li><strong>$50</strong> â half of one AP exam registration fee</li>
+        <li class="recommended"><strong>$99</strong> â one full AP exam fee for a prepared student <span class="rec-tag">Recommended</span></li>
+        <li><strong>$198</strong> â two students' exam fees, fully covered</li>
+        <li><strong>$500+</strong> â a full cohort through exam day</li>
       </ul>
 
       <div class="donate-widget">
@@ -95,18 +98,20 @@
           <dt>Mail</dt>
           <dd>Prosperity Pathways AP Foundation<br>7687 Circulo Sequoia, Carlsbad, CA 92009</dd>
           <dt>Tax status</dt>
-          <dd>Registered 501(c)(3) · EIN 61-2278521 · Gifts are tax-deductible</dd>
+          <dd>Registered 501(c)(3) Â· EIN 61-2278521 Â· Gifts are tax-deductible</dd>
         </dl>
       </div>
     </main>
 
     <aside>
       <nav aria-label="In This Section">
-        <p class="side-h">In This Section</p>
-        <ul class="side-list">
+        <button class="side-h side-h-toggle" aria-expanded="false">In This Section <span class="side-h-arrow">▾</span></button>
+        <div class="side-list-wrap">
+          <ul class="side-list">
           <li><a href="#tiers" class="active">Where your gift goes</a></li>
           <li><a href="#contact">Other ways to give</a></li>
         </ul>
+        </div>
       </nav>
       <div class="side-help">
         <h3>Have a question?</h3>
@@ -146,7 +151,7 @@
         </div>
       </div>
       <div class="footer-bot">
-        <span class="ein">EIN 61-2278521 · A registered 501(c)(3) nonprofit</span>
+        <span class="ein">EIN 61-2278521 Â· A registered 501(c)(3) nonprofit</span>
         <span class="tag">Lighting the way forward</span>
       </div>
     </div>
@@ -161,6 +166,31 @@
           a.classList.add('active');
         });
       });
+    })();
+  </script>
+  <script>
+    (function(){
+      var toggle = document.querySelector(".nav-toggle");
+      var links = document.querySelector(".nav-links");
+      if (toggle && links) {
+        toggle.addEventListener("click", function(){
+          var isOpen = links.classList.toggle("open");
+          toggle.classList.toggle("open", isOpen);
+          toggle.setAttribute("aria-expanded", isOpen);
+        });
+      }
+    })();
+  </script>
+  <script>
+    (function(){
+      var sideToggle = document.querySelector(".side-h-toggle");
+      var sideWrap = document.querySelector(".side-list-wrap");
+      if (sideToggle && sideWrap) {
+        sideToggle.addEventListener("click", function(){
+          var isOpen = sideWrap.classList.toggle("open");
+          sideToggle.setAttribute("aria-expanded", isOpen);
+        });
+      }
     })();
   </script>
 </body>

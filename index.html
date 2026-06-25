@@ -17,6 +17,9 @@
   <header class="nav">
     <div class="container nav-inner">
       <a class="nav-logo" href="index.html"><img src="assets/logo-horizontal.svg" alt="Prosperity Pathways AP Foundation"></a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
       <nav class="nav-links">
         <a href="index.html" class="active">Home</a>
         <a href="our-story.html">Our Story</a>
@@ -82,22 +85,22 @@
           <button class="tab" role="tab" data-tab="road">The Road Ahead</button>
         </div>
         <div class="tabpanel prose" data-panel="mission">
-          <p>Every spring, capable students decide not to sit for AP exams they have prepared for all year — not because they aren't ready, but because the fee is out of reach. A single exam costs nearly a hundred dollars. For a student taking three, that is a month of a parent's groceries.</p>
-          <p>Prosperity Pathways AP Foundation exists to remove that barrier. We fully fund AP exam fees and provide free preparation resources to high school students with financial need, so that talent — not tuition — determines who gets ahead.</p>
+          <p>Every spring, capable students decide not to sit for AP exams they have prepared for all year â not because they aren't ready, but because the fee is out of reach. A single exam costs nearly a hundred dollars. For a student taking three, that is a month of a parent's groceries.</p>
+          <p>Prosperity Pathways AP Foundation exists to remove that barrier. We fully fund AP exam fees and provide free preparation resources to high school students with financial need, so that talent â not tuition â determines who gets ahead.</p>
         </div>
         <div class="tabpanel prose" data-panel="approach" hidden>
           <p>We work directly through schools rather than around them. Counselors know which students qualify and which exams they intend to take; we fund those fees at the source and confirm registration before the deadline.</p>
-          <p>Alongside funding, every supported student receives free, curated preparation materials — practice sets, review guides, and study plans — assembled by recent AP students who sat the same exams.</p>
+          <p>Alongside funding, every supported student receives free, curated preparation materials â practice sets, review guides, and study plans â assembled by recent AP students who sat the same exams.</p>
         </div>
         <div class="tabpanel prose" data-panel="road" hidden>
           <p>In our first year we funded exams across two partner schools. The road ahead is straightforward: deepen those partnerships, formalize our prep library, and reach every eligible student in our partner districts by 2027.</p>
-          <p>Growth, for us, is measured in registrations confirmed and scores reported — never in overhead.</p>
+          <p>Growth, for us, is measured in registrations confirmed and scores reported â never in overhead.</p>
         </div>
       </div>
 
       <div class="contact">
         <div class="eyebrow">Contact Us</div>
-        <h3>Whether you teach, give, or want to learn more — we'd like to hear from you.</h3>
+        <h3>Whether you teach, give, or want to learn more â we'd like to hear from you.</h3>
         <p>Reach the foundation directly at <a href="mailto:info@prosperitypathwaysap.org">info@prosperitypathwaysap.org</a>.</p>
         <a href="get-involved.html" class="btn btn-donate">See ways to help</a>
       </div>
@@ -105,12 +108,14 @@
 
     <aside>
       <nav aria-label="In This Section">
-        <p class="side-h">In This Section</p>
-        <ul class="side-list">
+        <button class="side-h side-h-toggle" aria-expanded="false">In This Section <span class="side-h-arrow">▾</span></button>
+        <div class="side-list-wrap">
+          <ul class="side-list">
           <li><a href="#" class="active" data-jump="mission">Our Mission</a></li>
           <li><a href="#" data-jump="approach">Our Approach</a></li>
           <li><a href="#" data-jump="road">The Road Ahead</a></li>
         </ul>
+        </div>
       </nav>
       <div class="side-help">
         <h3>Have a question?</h3>
@@ -150,7 +155,7 @@
         </div>
       </div>
       <div class="footer-bot">
-        <span class="ein">EIN 61-2278521 · A registered 501(c)(3) nonprofit</span>
+        <span class="ein">EIN 61-2278521 Â· A registered 501(c)(3) nonprofit</span>
         <span class="tag">Lighting the way forward</span>
       </div>
     </div>
@@ -167,6 +172,31 @@
       }
       tabs.forEach(function(t){ t.addEventListener('click', function(){ show(t.dataset.tab); }); });
       jumps.forEach(function(j){ j.addEventListener('click', function(e){ e.preventDefault(); show(j.dataset.jump); }); });
+    })();
+  </script>
+  <script>
+    (function(){
+      var toggle = document.querySelector(".nav-toggle");
+      var links = document.querySelector(".nav-links");
+      if (toggle && links) {
+        toggle.addEventListener("click", function(){
+          var isOpen = links.classList.toggle("open");
+          toggle.classList.toggle("open", isOpen);
+          toggle.setAttribute("aria-expanded", isOpen);
+        });
+      }
+    })();
+  </script>
+  <script>
+    (function(){
+      var sideToggle = document.querySelector(".side-h-toggle");
+      var sideWrap = document.querySelector(".side-list-wrap");
+      if (sideToggle && sideWrap) {
+        sideToggle.addEventListener("click", function(){
+          var isOpen = sideWrap.classList.toggle("open");
+          sideToggle.setAttribute("aria-expanded", isOpen);
+        });
+      }
     })();
   </script>
 </body>

@@ -16,6 +16,9 @@
   <header class="nav">
     <div class="container nav-inner">
       <a class="nav-logo" href="index.html"><img src="assets/logo-horizontal.svg" alt="Prosperity Pathways AP Foundation"></a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
       <nav class="nav-links">
         <a href="index.html">Home</a>
         <a href="our-story.html">Our Story</a>
@@ -126,6 +129,19 @@
           a.classList.add('active');
         });
       });
+    })();
+  </script>
+  <script>
+    (function(){
+      var toggle = document.querySelector(".nav-toggle");
+      var links = document.querySelector(".nav-links");
+      if (toggle && links) {
+        toggle.addEventListener("click", function(){
+          var isOpen = links.classList.toggle("open");
+          toggle.classList.toggle("open", isOpen);
+          toggle.setAttribute("aria-expanded", isOpen);
+        });
+      }
     })();
   </script>
 </body>

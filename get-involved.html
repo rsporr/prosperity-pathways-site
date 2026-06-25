@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
-  <title>Get Involved — Prosperity Pathways AP Foundation</title>
+  <title>Get Involved â Prosperity Pathways AP Foundation</title>
   <link rel="icon" href="assets/app-icon.svg">
   <link rel="stylesheet" href="site.css">
   <script
@@ -16,6 +16,9 @@
   <header class="nav">
     <div class="container nav-inner">
       <a class="nav-logo" href="index.html"><img src="assets/logo-horizontal.svg" alt="Prosperity Pathways AP Foundation"></a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
       <nav class="nav-links">
         <a href="index.html">Home</a>
         <a href="our-story.html">Our Story</a>
@@ -57,21 +60,21 @@
   </section>
 
   <div class="crumbs">
-    <div class="container crumbs-inner"><a href="index.html">Home</a><span class="sep">›</span><span>Get Involved</span></div>
+    <div class="container crumbs-inner"><a href="index.html">Home</a><span class="sep">âº</span><span>Get Involved</span></div>
   </div>
 
   <div class="container layout">
     <main>
       <div id="students" class="involve">
         <div class="sec-head"><span class="eyebrow">For Students</span><h2>If the fee is your only barrier, ask.</h2></div>
-        <p class="prose">If your school already partners with us, talk to your counselor or AP coordinator — they can refer you directly, with no lengthy application or essay required. If you're not sure whether your school is a partner yet, or if it isn't, reach out to us directly and we'll figure out the best way to help.</p>
+        <p class="prose">If your school already partners with us, talk to your counselor or AP coordinator â they can refer you directly, with no lengthy application or essay required. If you're not sure whether your school is a partner yet, or if it isn't, reach out to us directly and we'll figure out the best way to help.</p>
         <a href="contact.html" class="btn btn-secondary">Reach out to us</a>
         <hr class="hr">
       </div>
 
       <div id="schools" class="involve">
         <div class="sec-head"><span class="eyebrow">For Schools</span><h2>Partnership starts with one conversation.</h2></div>
-        <p class="prose">Becoming a partner school is simple: there's no contract, no application, and no ongoing paperwork for your staff. Once we connect, your counselors and AP coordinators can refer eligible students directly to us — you decide who to refer, and we handle funding and registration confirmation before deadlines. No prepared student in your building should miss an exam over cost.</p>
+        <p class="prose">Becoming a partner school is simple: there's no contract, no application, and no ongoing paperwork for your staff. Once we connect, your counselors and AP coordinators can refer eligible students directly to us â you decide who to refer, and we handle funding and registration confirmation before deadlines. No prepared student in your building should miss an exam over cost.</p>
         <a href="partner-with-us.html" class="btn btn-secondary">Become a partner school</a>
         <hr class="hr">
       </div>
@@ -85,12 +88,14 @@
 
     <aside>
       <nav aria-label="In This Section">
-        <p class="side-h">In This Section</p>
-        <ul class="side-list">
+        <button class="side-h side-h-toggle" aria-expanded="false">In This Section <span class="side-h-arrow">▾</span></button>
+        <div class="side-list-wrap">
+          <ul class="side-list">
           <li><a href="#students" class="active">Students</a></li>
           <li><a href="#schools">Schools</a></li>
           <li><a href="#donors">Donors</a></li>
         </ul>
+        </div>
       </nav>
       <div class="side-help">
         <h3>Have a question?</h3>
@@ -130,7 +135,7 @@
         </div>
       </div>
       <div class="footer-bot">
-        <span class="ein">EIN 61-2278521 · A registered 501(c)(3) nonprofit</span>
+        <span class="ein">EIN 61-2278521 Â· A registered 501(c)(3) nonprofit</span>
         <span class="tag">Lighting the way forward</span>
       </div>
     </div>
@@ -145,6 +150,31 @@
           a.classList.add('active');
         });
       });
+    })();
+  </script>
+  <script>
+    (function(){
+      var toggle = document.querySelector(".nav-toggle");
+      var links = document.querySelector(".nav-links");
+      if (toggle && links) {
+        toggle.addEventListener("click", function(){
+          var isOpen = links.classList.toggle("open");
+          toggle.classList.toggle("open", isOpen);
+          toggle.setAttribute("aria-expanded", isOpen);
+        });
+      }
+    })();
+  </script>
+  <script>
+    (function(){
+      var sideToggle = document.querySelector(".side-h-toggle");
+      var sideWrap = document.querySelector(".side-list-wrap");
+      if (sideToggle && sideWrap) {
+        sideToggle.addEventListener("click", function(){
+          var isOpen = sideWrap.classList.toggle("open");
+          sideToggle.setAttribute("aria-expanded", isOpen);
+        });
+      }
     })();
   </script>
 </body>
