@@ -66,7 +66,7 @@ img{display:block}
 
 /* ---- Two-column layout ---- */
 .layout{display:grid;grid-template-columns:1fr var(--sidebar);gap:var(--col-gap);
-  align-items:start;padding:56px 0 88px}
+  align-items:start;padding-top:56px;padding-bottom:88px}
 main{min-width:0}
 aside{position:sticky;top:calc(var(--nav-h) + 24px)}
 
@@ -194,7 +194,7 @@ aside{position:sticky;top:calc(var(--nav-h) + 24px)}
 
 /* ---- Footer ---- */
 .footer{background:var(--navy-900);color:rgba(255,255,255,.78)}
-.footer-inner{padding:56px 0 40px}
+.footer-inner{padding-top:56px;padding-bottom:40px}
 .footer-top{display:flex;justify-content:space-between;gap:48px;flex-wrap:wrap}
 .footer-brand{max-width:320px}
 .footer-brand .row{display:flex;align-items:center;gap:14px;margin-bottom:16px}
