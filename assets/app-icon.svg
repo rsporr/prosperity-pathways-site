@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="Prosperity Pathways app icon">
-  <rect x="1" y="1" width="126" height="126" rx="28" fill="#FAFAF8" stroke="#1B3A5C" stroke-width="1.5"></rect>
-  <g transform="translate(35.2,24.4) scale(0.9)">
-    <path d="M23,43 L41,43 Q43.2,43 42.4,45.2 L38.2,55 L36,79 Q35.7,82 32,82 Q28.3,82 28,79 L25.8,55 L21.6,45.2 Q20.8,43 23,43 Z" fill="#1B3A5C"></path>
-    <path d="M32,46 C42,44.5 47.5,37 46,28 C44.5,20 38.5,13 33,5 C31.5,11 30.5,16 29.5,20 C25,15 18.5,23 18.5,32 C18.5,40 23.5,46 32,46 Z" fill="#B8860B"></path>
-    <path d="M32,43 C37,42 40.5,37 40,31 C39.5,25 36,20 33,14 C32.2,18 31.8,22 31,25 C28,21.5 25,26 25.5,31 C26,37 28,43 32,43 Z" fill="#D4A030"></path>
-  </g>
-</svg>
