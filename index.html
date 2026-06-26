@@ -17,14 +17,8 @@
   <header class="nav">
     <div class="container nav-inner">
       <a class="nav-logo" href="index.html"><img src="assets/logo-horizontal.svg" alt="Prosperity Pathways AP Foundation"></a>
-      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
       <nav class="nav-links">
         <a href="index.html" class="active">Home</a>
-        <a href="our-story.html">Our Story</a>
-        <a href="get-involved.html">Get Involved</a>
-        <a href="donate.html" class="cta">Donate</a>
       </nav>
     </div>
   </header>
@@ -61,81 +55,21 @@
     </div>
   </section>
 
-
-
   <footer class="footer">
     <div class="container footer-inner">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <div class="row">
+      <div class="footer-top" style="justify-content:center;text-align:center;">
+        <div class="footer-brand" style="max-width:480px;margin:0 auto;">
+          <div class="row" style="justify-content:center;">
             <img src="assets/icon-torch-white.svg" alt="">
             <div class="nm">Prosperity Pathways<span>AP Foundation</span></div>
           </div>
-          <p>Funding AP exam fees and free preparation for students with financial need.</p>
-        </div>
-        <div class="footer-cols">
-          <div>
-            <h4>Explore</h4>
-            <ul>
-              <li><a href="our-story.html">Our Story</a></li>
-              <li><a href="get-involved.html">Get Involved</a></li>
-              <li><a href="donate.html">Donate</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4>Contact</h4>
-            <ul>
-              <li><a href="contact.html">Contact Us</a></li>
-              <li><a href="mailto:info@prosperitypathwaysap.org">info@prosperitypathwaysap.org</a></li>
-              <li><a href="partner-with-us.html">Partner With Us</a></li>
-            </ul>
-          </div>
+          <p>Questions? Reach us at <a href="mailto:info@prosperitypathwaysap.org" style="color:var(--gold-400);">info@prosperitypathwaysap.org</a></p>
         </div>
       </div>
-      <div class="footer-bot">
+      <div class="footer-bot" style="justify-content:center;">
         <span class="ein">EIN 61-2278521 &middot; A registered 501(c)(3) nonprofit</span>
-        <span class="tag">Lighting the way forward</span>
       </div>
     </div>
   </footer>
-
-  <script>
-    (function(){
-      var tabs = document.querySelectorAll('.tab');
-      var jumps = document.querySelectorAll('[data-jump]');
-      function show(id){
-        tabs.forEach(function(t){ t.classList.toggle('active', t.dataset.tab === id); });
-        document.querySelectorAll('.tabpanel').forEach(function(p){ p.hidden = p.dataset.panel !== id; });
-        jumps.forEach(function(j){ j.classList.toggle('active', j.dataset.jump === id); });
-      }
-      tabs.forEach(function(t){ t.addEventListener('click', function(){ show(t.dataset.tab); }); });
-      jumps.forEach(function(j){ j.addEventListener('click', function(e){ e.preventDefault(); show(j.dataset.jump); }); });
-    })();
-  </script>
-  <script>
-    (function(){
-      var toggle = document.querySelector(".nav-toggle");
-      var links = document.querySelector(".nav-links");
-      if (toggle && links) {
-        toggle.addEventListener("click", function(){
-          var isOpen = links.classList.toggle("open");
-          toggle.classList.toggle("open", isOpen);
-          toggle.setAttribute("aria-expanded", isOpen);
-        });
-      }
-    })();
-  </script>
-  <script>
-    (function(){
-      var sideToggle = document.querySelector(".side-h-toggle");
-      var sideWrap = document.querySelector(".side-list-wrap");
-      if (sideToggle && sideWrap) {
-        sideToggle.addEventListener("click", function(){
-          var isOpen = sideWrap.classList.toggle("open");
-          sideToggle.setAttribute("aria-expanded", isOpen);
-        });
-      }
-    })();
-  </script>
 </body>
 </html>
