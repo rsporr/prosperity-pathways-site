@@ -142,6 +142,14 @@ aside{position:sticky;top:calc(var(--nav-h) + 24px)}
 .impact-list .rec-tag{display:inline-block;margin-left:8px;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-700);background:var(--white);padding:2px 8px;border-radius:999px;vertical-align:middle}
 .donate-action{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-bottom:8px}
 .donate-widget{margin-bottom:8px;max-width:480px}
+
+/* ---- Impact stats (home) ---- */
+.impact-stats{border-top:1px solid var(--line-200);border-bottom:1px solid var(--line-200);
+  padding-top:36px;padding-bottom:36px}
+.impact-stats .stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-bottom:22px}
+.impact-stats .stat-num{font-family:var(--font-serif);font-weight:700;font-size:44px;line-height:1;color:var(--navy-800)}
+.impact-stats .stat-label{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-700);margin-top:10px}
+.impact-stats .stat-note{font-size:16px;line-height:1.6;color:var(--ink-500);margin:0;max-width:620px}
 .donate-action .note{font-size:14px;color:var(--ink-500)}
 .donate-action .note strong{color:var(--navy-800)}
 .other-input{font-family:var(--font-sans,inherit);font-size:16px;padding:13px 16px;border:1px solid var(--line-300);
@@ -263,4 +271,6 @@ aside{position:sticky;top:calc(var(--nav-h) + 24px)}
 @media (max-width:560px){
   .hero h1{font-size:32px}
   body{overflow-x:hidden}
+  .impact-stats .stat-row{grid-template-columns:1fr;gap:24px}
+  .impact-stats .stat-num{font-size:36px}
 }
