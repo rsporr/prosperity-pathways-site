@@ -148,6 +148,14 @@ aside{position:sticky;top:calc(var(--nav-h) + 24px)}
   border-radius:4px;width:160px;color:var(--navy-800)}
 .other-input:focus{outline:none;border-color:var(--navy-800)}
 
+/* ---- Impact stats (home) ---- */
+.impact-stats{border-top:1px solid var(--line-200);border-bottom:1px solid var(--line-200);
+  padding-top:36px;padding-bottom:36px}
+.impact-stats .stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-bottom:22px}
+.impact-stats .stat-num{font-family:var(--font-serif);font-weight:700;font-size:44px;line-height:1;color:var(--navy-800)}
+.impact-stats .stat-label{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-700);margin-top:10px}
+.impact-stats .stat-note{font-size:16px;line-height:1.6;color:var(--ink-500);margin:0;max-width:620px}
+
 /* ---- Definition list (contact) ---- */
 .dl{margin:0;display:grid;grid-template-columns:140px 1fr;row-gap:12px;font-size:16px}
 .dl dt{color:var(--ink-400);font-weight:600}
@@ -263,4 +271,6 @@ aside{position:sticky;top:calc(var(--nav-h) + 24px)}
 @media (max-width:560px){
   .hero h1{font-size:32px}
   body{overflow-x:hidden}
+  .impact-stats .stat-row{grid-template-columns:1fr;gap:24px}
+  .impact-stats .stat-num{font-size:36px}
 }
