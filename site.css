@@ -215,10 +215,20 @@ aside{position:sticky;top:calc(var(--nav-h) + 24px)}
 .footer-cols ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
 .footer-cols a{color:rgba(255,255,255,.78);transition:color .12s var(--ease)}
 .footer-cols a:hover{color:var(--white)}
+.footer-seal{display:inline-block}
+.footer-seal img{height:92px;width:auto;display:block}
 .footer-bot{border-top:1px solid rgba(255,255,255,.14);margin-top:40px;padding-top:24px;
   display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .footer-bot .ein{font-size:14px;color:rgba(255,255,255,.6)}
 .footer-bot .tag{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-400)}
+/* ---- Candid seal callout ---- */
+.seal-block{display:flex;align-items:center;gap:20px;background:var(--navy-050);
+  border:1px solid var(--line-200);padding-top:20px;padding-bottom:20px;
+  padding-left:20px;padding-right:20px;margin-bottom:32px;max-width:620px}
+.seal-block img{height:96px;width:auto;display:block;flex:none}
+.seal-block .seal-text strong{display:block;font-family:var(--font-serif);font-weight:700;
+  font-size:15px;color:var(--navy-800);margin-bottom:6px}
+.seal-block .seal-text p{font-size:14px;line-height:1.6;color:var(--ink-700);margin:0}
 
 /* ---- Form embed (share your story) ---- */
 .form-embed{width:100%;border:1px solid var(--line-300);border-radius:4px;margin:24px 0}
@@ -273,4 +283,6 @@ aside{position:sticky;top:calc(var(--nav-h) + 24px)}
   body{overflow-x:hidden}
   .impact-stats .stat-row{grid-template-columns:1fr;gap:24px}
   .impact-stats .stat-num{font-size:36px}
+  .seal-block{flex-direction:column;align-items:flex-start;gap:14px}
+  .footer-seal img{height:80px}
 }
